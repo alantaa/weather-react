@@ -1,4 +1,13 @@
+.Weather {
+  margin: 50px;
+}
+
 ul {
+  padding: 0px !important;
   list-style-type: none;
   text-decoration: none;
+  padding-bottom: 20px;
+}
+.list2 li {
+  padding-bottom: 20px;
 }
