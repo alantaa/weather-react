@@ -3,11 +3,24 @@
 }
 
 ul {
+  color: white;
   padding: 0px !important;
   list-style-type: none;
   text-decoration: none;
   padding-bottom: 20px;
+  text-transform: capitalize;
 }
 .list2 li {
   padding-bottom: 20px;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url("river.jpg");
+  height: 100%;
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
