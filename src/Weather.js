@@ -39,7 +39,7 @@ export default function Weather(props) {
     <form onSubmit={handleResponse}>
       <input
         type="search"
-        className="form-control"
+        className="form-control "
         placeholder="Enter a city..."
         aria-label="Search"
         aria-describedby="search-addon"
@@ -53,21 +53,19 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <div className="row justify-content-between">
-          <div className="col-2 list1">
+          <div className="col-md-3 list1">
             <ul>
               <li>
                 <img src={weather.icon} alt={weather.description} />
               </li>
               <li>{weather.description}</li>
-              <li>
-                <strong>{weather.name}</strong>
-              </li>
+              <li className="city">{weather.name}</li>
               <li className="currentTemp">{Math.round(weather.temp)}°C</li>
             </ul>
             {form}
           </div>
 
-          <div className="col-2 list2">
+          <div className="col-md-2 list2">
             <ul className="list2">
               <li>
                 Humidity
