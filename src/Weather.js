@@ -59,8 +59,10 @@ export default function Weather(props) {
                 <img src={weather.icon} alt={weather.description} />
               </li>
               <li>{weather.description}</li>
-              <li>{weather.name}</li>
-              <li>{Math.round(weather.temp)}°C</li>
+              <li>
+                <strong>{weather.name}</strong>
+              </li>
+              <li className="currentTemp">{Math.round(weather.temp)}°C</li>
             </ul>
             {form}
           </div>

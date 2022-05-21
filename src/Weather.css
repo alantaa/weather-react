@@ -10,6 +10,13 @@ ul {
   padding-bottom: 20px;
   text-transform: capitalize;
 }
+strong {
+  font-size: 26px;
+}
+.currentTemp {
+  font-size: 55px;
+  font-weight: bolder;
+}
 .list2 li {
   padding-bottom: 20px;
 }
