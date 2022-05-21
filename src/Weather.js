@@ -48,16 +48,18 @@ export default function Weather(props) {
               <li>{weather.description}</li>
               <li>{weather.name}</li>
               <li>{Math.round(weather.temp)}°C</li>
-              <li>
-                <form onSubmit={handleResponse}>
-                  <input
-                    type="search"
-                    placeholder="Enter a city..."
-                    onChange={updateCity}
-                  />
-                </form>
-              </li>
             </ul>
+            <form onSubmit={handleResponse}>
+              <input
+                type="search"
+                className="form-control"
+                placeholder="Enter a city..."
+                aria-label="Search"
+                aria-describedby="search-addon"
+                autoFocus="on"
+                onChange={updateCity}
+              />
+            </form>
           </div>
 
           <div className="col-2 list2">
