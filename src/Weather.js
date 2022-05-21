@@ -22,7 +22,7 @@ export default function Weather(props) {
 
   function handleResponse(event) {
     event.preventDefault();
-    search();
+    search(city);
   }
 
   function updateCity(event) {
@@ -31,9 +31,23 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "2ada9023ee6b674c5142a0f7109917e0";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},uk&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
   }
+
+  const form = (
+    <form onSubmit={handleResponse}>
+      <input
+        type="search"
+        className="form-control"
+        placeholder="Enter a city..."
+        aria-label="Search"
+        aria-describedby="search-addon"
+        autoFocus="on"
+        onChange={updateCity}
+      />
+    </form>
+  );
 
   if (weather.ready) {
     return (
@@ -42,24 +56,13 @@ export default function Weather(props) {
           <div className="col-2 list1">
             <ul>
               <li>
-                {" "}
                 <img src={weather.icon} alt={weather.description} />
               </li>
               <li>{weather.description}</li>
               <li>{weather.name}</li>
               <li>{Math.round(weather.temp)}°C</li>
             </ul>
-            <form onSubmit={handleResponse}>
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Enter a city..."
-                aria-label="Search"
-                aria-describedby="search-addon"
-                autoFocus="on"
-                onChange={updateCity}
-              />
-            </form>
+            {form}
           </div>
 
           <div className="col-2 list2">
