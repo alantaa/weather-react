@@ -105,15 +105,15 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
+    // search();
     return (
       <div className="loading">
         <SpinnerCircularSplit
           size={90}
-          thickness={141}
+          thickness={150}
           speed={100}
           color="rgba(255, 255, 255, 1)"
-          secondaryColor="rgba(0, 0, 0, 0.74)"
+          secondaryColor="rgba(255, 255, 255, 0.5)"
         />
       </div>
     );
