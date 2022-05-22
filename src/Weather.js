@@ -105,7 +105,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    // search();
+    search();
     return (
       <div className="loading">
         <SpinnerCircularSplit
