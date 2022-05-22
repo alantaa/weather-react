@@ -61,7 +61,7 @@ export default function Weather(props) {
                 <img src={weather.icon} alt={weather.description} />
               </li>
 
-              <li>{weather.description}</li>
+              <li className="text-capitalize">{weather.description}</li>
               <li className="city">{weather.name}</li>
 
               <li className="currentTemp">{Math.round(weather.temp)}°C</li>
@@ -81,7 +81,7 @@ export default function Weather(props) {
               </li>
               <li>
                 Wind Speed <br />
-                <strong>{weather.wind} kM/h</strong>
+                <strong>{weather.wind} km/h</strong>
               </li>
 
               <li>
