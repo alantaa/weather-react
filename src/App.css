@@ -1,4 +1,10 @@
 .App-footer {
   text-align: center;
-  color: black;
+  color: white;
+  background: black;
+  padding: 5px;
+  margin-top: 180px;
+}
+a {
+  color: grey !important;
 }

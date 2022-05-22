@@ -1,0 +1,9 @@
+.temp {
+  font-size: 55px !important;
+  font-weight: bolder;
+}
+.unit {
+  position: relative;
+  top: -26px;
+  font-size: 18px;
+}

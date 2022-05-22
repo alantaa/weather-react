@@ -1,7 +1,10 @@
 .Weather {
   margin: 50px;
 }
-
+.loading {
+  text-align: center;
+  margin: 200px 0px 280px 0px;
+}
 ul {
   color: white;
   padding: 0px !important;
@@ -13,10 +16,6 @@ ul {
 }
 strong {
   font-size: 26px;
-}
-.currentTemp {
-  font-size: 55px;
-  font-weight: bolder;
 }
 .city {
   font-size: 32px;

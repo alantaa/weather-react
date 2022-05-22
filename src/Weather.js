@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import { SpinnerCircularSplit } from "spinners-react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import CurrentTemp from "./CurrentTemp";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -65,7 +67,9 @@ export default function Weather(props) {
               <li className="text-capitalize">{weather.description}</li>
               <li className="city">{weather.name}</li>
 
-              <li className="currentTemp">{Math.round(weather.temp)}°C</li>
+              <li>
+                <CurrentTemp celsius={weather.temp} />
+              </li>
               <li>
                 <FormattedDate date={weather.date} />
               </li>
@@ -101,6 +105,16 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="loading">
+        <SpinnerCircularSplit
+          size={90}
+          thickness={141}
+          speed={100}
+          color="rgba(255, 255, 255, 1)"
+          secondaryColor="rgba(0, 0, 0, 0.74)"
+        />
+      </div>
+    );
   }
 }
