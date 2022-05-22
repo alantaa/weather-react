@@ -1,10 +1,24 @@
 .App-footer {
   text-align: center;
   color: white;
-  background: black;
-  padding: 5px;
-  margin-top: 180px;
 }
+
 a {
-  color: grey !important;
+  color: rgb(141, 137, 137) !important;
+}
+body {
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url("road4.jpg");
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url("road2.jpg");
+    height: 100%;
+  }
 }

@@ -24,11 +24,13 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <ReactAnimatedWeather
-      icon={codeMapping[props.code]}
-      color="white"
-      size="70px"
-      animate={true}
-    />
+    <div className="WeatherIcon">
+      <ReactAnimatedWeather
+        icon={codeMapping[props.code]}
+        size="70px"
+        color="white"
+        animate={true}
+      />
+    </div>
   );
 }

@@ -58,7 +58,8 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <div className="row justify-content-between">
-          <div className="col-md-3 list1">
+          <span className="form1 mb-5 ">{form}</span>
+          <div className="col-sm-3 list1">
             <ul>
               <li>
                 <WeatherIcon code={weather.icon} alt={weather.description} />{" "}
@@ -74,10 +75,10 @@ export default function Weather(props) {
                 <FormattedDate date={weather.date} />
               </li>
             </ul>
-            {form}
+            <span className="form2">{form}</span>
           </div>
 
-          <div className="col-md-2 list2">
+          <div className="col-sm-3 list2">
             <ul className="list2">
               <li>
                 Humidity
