@@ -5,6 +5,7 @@
   text-align: center;
   margin: 200px 0px 280px 0px;
 }
+
 ul {
   color: #ffffff;
   padding: 0px !important;
@@ -50,7 +51,7 @@ strong {
     text-align: right;
   }
   .list1 {
-    text-align: center;
     background-color: black;
+    text-align: center;
   }
 }

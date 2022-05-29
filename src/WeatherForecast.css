@@ -1,0 +1,10 @@
+.WeatherForecast {
+  color: white;
+  text-align: center;
+}
+.Forecast-temp-min {
+  opacity: 65%;
+}
+.Forecast-day {
+  margin-bottom: 10px;
+}

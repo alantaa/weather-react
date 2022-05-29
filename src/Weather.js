@@ -5,6 +5,7 @@ import { SpinnerCircularSplit } from "spinners-react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import CurrentTemp from "./CurrentTemp";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -13,6 +14,7 @@ export default function Weather(props) {
   function showWeather(response) {
     setWeather({
       ready: true,
+      coordinates: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
       pressure: response.data.main.pressure,
@@ -62,7 +64,11 @@ export default function Weather(props) {
           <div className="col-sm-3 list1">
             <ul>
               <li>
-                <WeatherIcon code={weather.icon} alt={weather.description} />{" "}
+                <WeatherIcon
+                  code={weather.icon}
+                  size={70}
+                  alt={weather.description}
+                />{" "}
               </li>
 
               <li className="text-capitalize">{weather.description}</li>
@@ -102,6 +108,7 @@ export default function Weather(props) {
             </ul>
           </div>
         </div>
+        <WeatherForecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
