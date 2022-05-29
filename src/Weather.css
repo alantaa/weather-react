@@ -6,13 +6,14 @@
   margin: 200px 0px 280px 0px;
 }
 ul {
-  color: white;
+  color: #ffffff;
   padding: 0px !important;
   list-style-type: none;
   text-decoration: none;
   padding-bottom: 20px;
   font-weight: lighter;
   font-size: 18px;
+  opacity: 100%;
 }
 strong {
   font-size: 26px;
@@ -50,5 +51,6 @@ strong {
   }
   .list1 {
     text-align: center;
+    background-color: black;
   }
 }
