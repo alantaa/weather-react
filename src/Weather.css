@@ -1,5 +1,5 @@
 .Weather {
-  margin: 50px;
+  margin: 80px;
 }
 .loading {
   text-align: center;
@@ -48,10 +48,13 @@ strong {
   strong {
     font-size: 15px;
     padding-top: 55px;
-    text-align: right;
+    text-align: center;
   }
   .list1 {
     background-color: black;
     text-align: center;
+  }
+  .Weather {
+    margin: 30px;
   }
 }

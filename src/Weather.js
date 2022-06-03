@@ -61,7 +61,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="row justify-content-between">
           <span className="form1 mb-5 ">{form}</span>
-          <div className="col-sm-3 list1">
+          <div className="col-sm-4 list1">
             <ul>
               <li>
                 <WeatherIcon
